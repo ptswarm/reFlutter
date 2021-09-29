@@ -10,7 +10,7 @@ Usage
 ```console
 impact@f:~$ reflutter
 USAGE:
-reflutter your.(apk)|(ipa)
+     reflutter your.(apk)|(ipa)
 ```
 ```console
 impact@f:~$ reflutter main.apk
