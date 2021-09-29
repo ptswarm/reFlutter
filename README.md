@@ -16,7 +16,6 @@ USAGE:
 ```console
 impact@f:~$ reflutter main.apk
 
-Example: (192.168.1.154) etc.
 Please enter your Burp IP: <input_ip>
 
 SnapshotHash: 8ee4ef7a67df9845fba331734198a953
