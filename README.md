@@ -7,10 +7,10 @@ Reverse Flutter.
 Usage
 =====
 
-.. code:: bash
+... code:: bash
 
-USAGE:
-reflutter your.(apk)|(ipa)
+...USAGE:
+...reflutter your.(apk)|(ipa)
 
 
 
