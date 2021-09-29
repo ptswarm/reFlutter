@@ -8,7 +8,9 @@ Install
 =====
 ```console
 impact@f:~$ pip install reflutter
-#or
+```
+or
+```
 impact@f:~$ pip3 install reflutter
 ```
 Usage
