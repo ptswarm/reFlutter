@@ -8,6 +8,7 @@ Reverse Flutter
 ## Install
 ```
 pip install reflutter
+||
 pip3 install reflutter
 ```
 ## Usage
