@@ -7,20 +7,14 @@ Reverse Flutter
 Install
 =====
 ```console
-impact@f:~$ pip install reflutter
+pip install reflutter
 ```
 or
 ```
-impact@f:~$ pip3 install reflutter
+pip3 install reflutter
 ```
 Usage
 =====
-```console
-impact@f:~$ reflutter
-
-USAGE:
-     reflutter your.(apk)|(ipa)
-```
 ```console
 impact@f:~$ reflutter main.apk
 
