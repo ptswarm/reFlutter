@@ -7,13 +7,12 @@ Reverse Flutter.
 Usage
 =====
 
-... code:: bash
+```console
+impact@f:~$ reflutter
+USAGE:
+reflutter your.(apk)|(ipa)
 
-...USAGE:
-...reflutter your.(apk)|(ipa)
-
-
-
+impact@f:~$ reflutter main.apk
 Example: (192.168.1.154) etc.
 Please enter your Burp IP: 192.168.1.129
 
@@ -23,3 +22,4 @@ Please sign the apk file
 
 Configure Proxy in Burp -> *:8083
 Request Handling -> Support Invisible Proxying -> true
+```
