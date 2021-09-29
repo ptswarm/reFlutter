@@ -8,7 +8,6 @@ Install
 =====
 ```
 pip install reflutter
-#or
 pip3 install reflutter
 ```
 Usage
