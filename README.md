@@ -8,9 +8,7 @@ Install
 =====
 ```
 pip install reflutter
-```
-or
-```
+#or
 pip3 install reflutter
 ```
 Usage
