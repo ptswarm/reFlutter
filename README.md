@@ -4,9 +4,15 @@ reFlutter
 Reverse Flutter
 
 
+Install
+=====
+```console
+impact@f:~$ pip install reflutter
+#or
+impact@f:~$ pip3 install reflutter
+```
 Usage
 =====
-
 ```console
 impact@f:~$ reflutter
 
