@@ -11,7 +11,8 @@ Usage
 impact@f:~$ reflutter
 USAGE:
 reflutter your.(apk)|(ipa)
-
+```
+```console
 impact@f:~$ reflutter main.apk
 Example: (192.168.1.154) etc.
 Please enter your Burp IP: 192.168.1.129
