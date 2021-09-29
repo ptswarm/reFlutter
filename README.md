@@ -6,7 +6,7 @@ Reverse Flutter
 
 Install
 =====
-```console
+```
 pip install reflutter
 ```
 or
