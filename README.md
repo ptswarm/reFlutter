@@ -23,4 +23,6 @@ Please sign the apk file
 
 Configure Proxy in Burp -> *:8083
 Request Handling -> Support Invisible Proxying -> true
+
+impact@f:~$ reflutter main.ipa
 ```
