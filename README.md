@@ -9,8 +9,10 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/87244850/135372439-822467e7-03db-4593-9063-09a2cec460c2.jpg" width="100%"/></p>
 
 
-Reverse Flutter
-
+A framework to help reverse engineer Flutter with the correct version of the engine, which is pre-compiled and modified to read and process the snapshot. Added a patch for intercepting traffic in socket.cc, modified dart.cc to display classes, functions and some fields, as well as several changes for successful compilation. Created a Dockerfile to manually modify the Flutter source code.
+## Supported engines
+Android: arm64, arm32;
+Ios: arm64
 
 ## Install
 ```
