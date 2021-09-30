@@ -1,7 +1,7 @@
 ![workflow](https://github.com/ptswarm/reFlutter/actions/workflows/main.yml/badge.svg)
 
 ![stars](https://img.shields.io/github/stars/ptswarm/reFlutter)
-[![github_downloads](https://img.shields.io/github/downloads/ptswarm/reFlutter/total?label=downloads&logo=github)](https://github.com/Impact-I/x8-Burp/releases/tag/)
+[![github_downloads](https://img.shields.io/github/downloads/ptswarm/reFlutter/total?label=downloads&logo=github)](https://github.com/ptswarm/reFlutter/tags)
 <h3 align="center">reFlutter</h3>
 
 #
