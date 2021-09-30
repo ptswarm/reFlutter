@@ -32,7 +32,13 @@ Request Handling -> Support Invisible Proxying -> true
 
 impact@f:~$ reflutter main.ipa
 ```
+## Output Example
+```console
+impact@f:~$ adb logcat -e reflutter | sed 's/.*DartVM//' >> reflutter.txt
+```
+```
 
+```
 ## Flutter version table
 Based on ```https://storage.googleapis.com/flutter_infra_release/flutter/<version_hash>/android-arm64-release/linux-x64.zip```
 | version           | Engine_commit                            | Snapshot_Hash                     |
