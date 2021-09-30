@@ -1,6 +1,10 @@
+![stars](https://img.shields.io/github/stars/Impact-I/x8-Burp)
 <h3 align="center">reFlutter</h3>
 
 #
+
+![stars](https://img.shields.io/github/stars/ptswarm/reFlutter)
+[![github_downloads](https://img.shields.io/github/downloads/ptswarm/reFlutter/total?label=downloads&logo=github)](https://github.com/Impact-I/x8-Burp/releases/tag/)
 
 Reverse Flutter
 
