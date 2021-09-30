@@ -37,7 +37,65 @@ impact@f:~$ reflutter main.ipa
 adb logcat -e reflutter | sed 's/.*DartVM//' >> reflutter.txt
 ```
 ```
+Library:'package:anyapp/navigation/DeepLinkImpl.dart' Class: Navigation extends Object {  
 
+PlainNotificationToken* _instance = sentinel;
+int* CODE_200 = 200 ;
+String DeepUrl = anyapp://evil.com/
+
+ Function 'Navigation.': constructor. (dynamic, dynamic, dynamic, dynamic) => NavigationInteractor { 
+  
+                   }
+    
+ Function 'initDeepLinkListener':. (dynamic) => Future<void>* { 
+  
+                   }
+ 
+ Function 'navigateTo':. (dynamic, dynamic, {dynamic navigator}) => void { 
+ 
+                   }
+    
+ Function '_navigateDeepLink@547106886':. (dynamic, dynamic, {dynamic navigator}) => void { 
+
+                   }
+ 
+       }
+ 
+ Library:'package:anyapp/auth/navigation/AuthAccount.dart' Class: AuthAccount extends Account {
+ 
+ Function 'getAuthToken':. (dynamic, dynamic, dynamic, dynamic) => Future<AccessToken*>* { 
+
+                  }
+  
+ Function 'checkEmail':. (dynamic, dynamic) => Future<bool*>* { 
+ 
+                 }
+ 
+ Function 'checkPhone':. (dynamic, dynamic) => Future<bool*>* { 
+
+                 }
+
+ Function 'validateRestoreCode':. (dynamic, dynamic, dynamic) => Future<bool*>* { 
+ 
+                 }
+
+ Function 'sendSmsRestorePassword':. (dynamic, dynamic) => Future<bool*>* { 
+
+                 }
+
+ Function 'sendRestoreEmail':. (dynamic, dynamic) => Future<bool*>* { 
+
+                  }
+ 
+ Function 'restorePass':. (dynamic, dynamic, dynamic, dynamic) => Future<bool*>* { 
+ 
+                  }
+ 
+ Function 'regUserName':. (dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic) => Future<bool*>* { 
+  
+                     }
+
+                  }
 ```
 ## Flutter version table
 Based on ```https://storage.googleapis.com/flutter_infra_release/flutter/<version_hash>/android-arm64-release/linux-x64.zip```
