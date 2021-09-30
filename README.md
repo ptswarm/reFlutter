@@ -34,7 +34,7 @@ impact@f:~$ reflutter main.ipa
 ```
 ## Output Example
 ```console
-impact@f:~$ adb logcat -e reflutter | sed 's/.*DartVM//' >> reflutter.txt
+adb logcat -e reflutter | sed 's/.*DartVM//' >> reflutter.txt
 ```
 ```
 
