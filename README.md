@@ -39,14 +39,13 @@ adb logcat -e reflutter | sed 's/.*DartVM//' >> reflutter.txt
 ```
 Library:'package:anyapp/navigation/DeepLinkImpl.dart' Class: Navigation extends Object {  
 
-PlainNotificationToken* _instance = sentinel;
-String DeepUrl = anyapp://evil.com/
+String DeepUrl = anyapp://evil.com/;
 
  Function 'Navigation.': constructor. (dynamic, dynamic, dynamic, dynamic) => NavigationInteractor { 
   
                    }
     
- Function 'initDeepLinkListener':. (dynamic) => Future<void>* { 
+ Function 'initDeepLinkHandle':. (dynamic) => Future<void>* { 
   
                    }
  
@@ -63,6 +62,7 @@ String DeepUrl = anyapp://evil.com/
  Library:'package:anyapp/auth/navigation/AuthAccount.dart' Class: AuthAccount extends Account {
  
  int* CODE_200 = 200 ;
+ PlainNotificationToken* _instance = sentinel;
  
  Function 'getAuthToken':. (dynamic, dynamic, dynamic, dynamic) => Future<AccessToken*>* { 
 
@@ -79,11 +79,6 @@ String DeepUrl = anyapp://evil.com/
  Function 'sendSmsRestorePassword':. (dynamic, dynamic) => Future<bool*>* { 
 
                  }
-
- Function 'sendRestoreEmail':. (dynamic, dynamic) => Future<bool*>* { 
-
-                  }
-
           }
 ```
 ## Flutter version table
