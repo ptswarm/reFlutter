@@ -48,10 +48,6 @@ String DeepUrl = anyapp://evil.com/;
  Function 'initDeepLinkHandle':. (dynamic) => Future<void>* { 
   
                    }
- 
- Function 'navigateTo':. (dynamic, dynamic, {dynamic navigator}) => void { 
- 
-                   }
     
  Function '_navigateDeepLink@547106886':. (dynamic, dynamic, {dynamic navigator}) => void { 
 
