@@ -6,7 +6,7 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/87244850/135372439-822467e7-03db-4593-9063-09a2cec460c2.jpg" width="100%"/></p>
 
 
-A framework to help reverse engineer Flutter with the correct version of the engine, which is pre-compiled and modified to read and deserialize the snapshot. Added a patch for intercepting traffic in socket.cc, modified dart.cc to display classes, functions and some fields, as well as several changes for successful compilation. Manual modification of the Flutter source code is supported using a custom Dockerfile.
+A framework to help reverse engineer Flutter with the correct version of the engine, which is pre-compiled and modified to read and deserialize the snapshot. Added a patch for intercepting traffic in ```socket.cc```, modified ```dart.cc``` to display classes, functions and some fields, as well as several changes for successful compilation. Manual modification of the Flutter source code is supported using a custom Dockerfile.
 ## Supported engines
 - Android: arm64, arm32;
 - IOS: arm64 (Unstable);
