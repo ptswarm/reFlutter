@@ -13,7 +13,7 @@ A framework to help reverse engineer Flutter with the correct version of the eng
 ## Supported engines
 - Android: arm64, arm32;
 - Ios: arm64
-
+- Release: Stable, Beta
 ## Install
 ```
 pip install reflutter
