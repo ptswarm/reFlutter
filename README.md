@@ -33,7 +33,7 @@ Request Handling -> Support Invisible Proxying -> true
 impact@f:~$ reflutter main.ipa
 ```
 ## Output Example
-```console
+```
 adb logcat -e reflutter | sed 's/.*DartVM//' >> reflutter.txt
 ```
 ```
