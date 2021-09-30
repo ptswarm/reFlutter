@@ -33,8 +33,8 @@ Request Handling -> Support Invisible Proxying -> true
 impact@f:~$ reflutter main.ipa
 ```
 ## Output Example
-```
-adb logcat -e reflutter | sed 's/.*DartVM//' >> reflutter.txt
+```console
+impact@f:~$ adb logcat -e reflutter | sed 's/.*DartVM//' >> reflutter.txt
 ```
 ```
 Library:'package:anyapp/navigation/DeepLinkImpl.dart' Class: Navigation extends Object {  
@@ -61,7 +61,6 @@ String DeepUrl = anyapp://evil.com/;
  
  Library:'package:anyapp/auth/navigation/AuthAccount.dart' Class: AuthAccount extends Account {
  
- int* CODE_200 = 200 ;
  PlainNotificationToken* _instance = sentinel;
  
  Function 'getAuthToken':. (dynamic, dynamic, dynamic, dynamic) => Future<AccessToken*>* { 
