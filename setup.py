@@ -24,12 +24,12 @@ CLASSIFIERS = [
 
 setuptools.setup(
     name='reflutter',
-    version='0.3.9',
+    version='0.4.0',
     description=SHORT_DESCRIPTION,
     long_description=LONG_DESCRIPTION,
     author='impact',
     author_email='routeros7.1@gmail.com',
-    url='https://github.com/',
+    url='https://github.com/ptswarm/reFlutter',
     packages=setuptools.find_packages(),
     license='GPLv3+',
     platforms=['any'],
