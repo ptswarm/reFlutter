@@ -2,11 +2,9 @@
 
 ![stars](https://img.shields.io/github/stars/ptswarm/reFlutter)
 [![github_downloads](https://img.shields.io/github/downloads/ptswarm/reFlutter/total?label=downloads)](https://github.com/ptswarm/reFlutter/tags)
-<p align="center"><img src="https://user-images.githubusercontent.com/87244850/135656600-ee315bb3-46fa-434e-9dea-b19351b888c3.png" width="100%"/></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/87244850/135656600-ee315bb3-46fa-434e-9dea-b19351b888c3.png" width="70%"/></p>
 
 #
-
-<p align="center"><img src="https://user-images.githubusercontent.com/87244850/135372439-822467e7-03db-4593-9063-09a2cec460c2.jpg" width="100%"/></p>
 
 This framework helps reverse engineer Flutter apps using patched version of Flutter Engine library which is aleady compiled and ready for app repacking. There are changes made to snapshot deserialization process that allow you perform dynamic analysis in a convenient way.
 
