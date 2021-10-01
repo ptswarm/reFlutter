@@ -6,7 +6,7 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/87244850/135659542-22bb8496-bf26-4e25-b7c1-ffd8fc0cea10.png" width="80%"/></p>
 
 #
-This framework helps reverse engineer Flutter apps using patched version of DartVM which is already compiled and ready for app repacking. There are changes made to snapshot deserialization process that allow you perform dynamic analysis in a convenient way.
+This framework helps reverse engineer Flutter apps using patched version of Flutter library which is already compiled and ready for app repacking. There are changes made to snapshot deserialization process that allow you perform dynamic analysis in a convenient way.
 
 Key features:
 - `socket.cc` is patched for traffic monitoring and interception;
