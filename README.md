@@ -5,12 +5,13 @@
 <h2 align="center">reFlutter</h1>
 <p align="center"><img src="https://user-images.githubusercontent.com/87244850/135372439-822467e7-03db-4593-9063-09a2cec460c2.jpg" width="100%"/></p>
 
-This framework helps reverse engineer Flutter apps using patched version of libflutter.so which is aleady compiled and able to deserialize snapshot
+This framework helps reverse engineer Flutter apps using patched version of Flutter Engine library which is aleady compiled and ready for app repacking. There are changes made to snapshot deserialization process that allow you perform dynamic analysis in a convenient way.
 
 Key features:
-- `socket.cc` is patched for traffic monitoring and interception
-- `dart.cc` is modified to print classes, functions and some fields, it also contains minor changes for successfull compilation
-- if you would like to implement your own patches there is manual Flutter code change is supported using specially crafted `Dockerfile`
+- socket.cc is patched for traffic monitoring and interception
+- dart.cc is modified to print classes, functions and some fields, 
+- contains minor changes for successfull compilation
+- if you would like to implement your own patches there is manual Flutter code change is supported using specially crafted Dockerfile
 ## Supported engines
 - Android: arm64, arm32;
 - IOS: arm64 (Unstable);
