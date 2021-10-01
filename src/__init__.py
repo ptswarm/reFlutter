@@ -23,12 +23,6 @@ libAppX86 = '',''
 libios = '',''
 libappHash = ''
 
-def silentremove(filename):
-    try:
-        os.remove(filename)
-    except:
-        pass
-
 def patchLibrary():
  if len(libios[1]) != 0:
     buffer = open('Flutter', 'rb').read().replace(b'192.168.133.104', IPBurp.encode('ascii'))
@@ -64,32 +58,38 @@ def networkLib():
         urlretrieve("https://github.com/ptswarm/reFlutter/releases/download/ios-"+libios[1]+"/Flutter", "Flutter")
        except:
         libios='',''
-        silentremove("Flutter")
+        notexcept("Flutter")
     if len(libAppArm64[1]) != 0:
        try: 
         urlretrieve("https://github.com/ptswarm/reFlutter/releases/download/android-"+libAppArm64[1]+"/libflutter_arm64.so", "libflutter_arm64.so")
        except:
         libAppArm64='',''
-        silentremove("libflutter_arm64.so")
+        notexcept("libflutter_arm64.so")
     if len(libAppArm[1]) != 0:
        try:
         urlretrieve("https://github.com/ptswarm/reFlutter/releases/download/android-"+libAppArm[1]+"/libflutter_arm.so", "libflutter_arm.so")
        except:
         libAppArm='',''
-        silentremove("libflutter_arm.so")
+        notexcept("libflutter_arm.so")
     if len(libAppX64[1]) != 0:
        try:
         urlretrieve("https://github.com/ptswarm/reFlutter/releases/download/android-"+libAppX64[1]+"/libflutter_x64.so", "libflutter_x64.so")
        except:
         libAppX64='',''
-        silentremove("libflutter_x64.so")
+        notexcept("libflutter_x64.so")
     if len(libAppX86[1]) != 0:
        try:
         urlretrieve("https://github.com/ptswarm/reFlutter/releases/download/android-"+libAppX86[1]+"/libflutter_x86.so", "libflutter_x86.so")
        except:
         libAppX86='',''
-        silentremove("libflutter_x86.so")
+        notexcept("libflutter_x86.so")
     patchLibrary()
+
+def notexcept(filename):
+    try:
+        os.remove(filename)
+    except:
+        pass
 
 def replaceLibFlutter():
     if len(sys.argv) < 3:
