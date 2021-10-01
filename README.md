@@ -66,19 +66,19 @@ String DeepUrl = anyapp://evil.com/;
  
  Function 'getAuthToken':. (dynamic, dynamic, dynamic, dynamic) => Future<AccessToken*>* { 
 
-                  }
+                   }
   
  Function 'checkEmail':. (dynamic, dynamic) => Future<bool*>* { 
  
-                  }
+                   }
 
  Function 'validateRestoreCode':. (dynamic, dynamic, dynamic) => Future<bool*>* { 
  
-                  }
+                   }
 
  Function 'sendSmsRestorePassword':. (dynamic, dynamic) => Future<bool*>* { 
 
-                  }
+                   }
        }
 ```
 ## Flutter version table
