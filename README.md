@@ -70,16 +70,16 @@ String DeepUrl = anyapp://evil.com/;
   
  Function 'checkEmail':. (dynamic, dynamic) => Future<bool*>* { 
  
-                 }
+                  }
 
  Function 'validateRestoreCode':. (dynamic, dynamic, dynamic) => Future<bool*>* { 
  
-                 }
+                  }
 
  Function 'sendSmsRestorePassword':. (dynamic, dynamic) => Future<bool*>* { 
 
-                 }
-          }
+                  }
+       }
 ```
 ## Flutter version table
 Based on ```https://storage.googleapis.com/flutter_infra_release/flutter/<version_hash>/android-arm64-release/linux-x64.zip```
