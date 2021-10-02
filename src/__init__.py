@@ -8,6 +8,7 @@ import os
 import os.path
 from os.path import join
 from zipfile import ZipFile
+import zipfile
 import shutil
 
 if sys.version_info[0] >= 3:
@@ -22,6 +23,7 @@ libAppX64 = '',''
 libAppX86 = '',''
 libios = '',''
 libappHash = ''
+ZIPSTORED = False
 
 def patchLibrary():
  if len(libios[1]) != 0:
@@ -91,6 +93,17 @@ def notexcept(filename):
     except:
         pass
 
+def zipdir(path, ziph):
+    for root, dirs, files in os.walk(path):
+        for file in files:
+            if type(file) is str:
+                if file.endswith('.so'):
+                    ziph.write(os.path.join(root, file), os.path.relpath(os.path.join(root.replace('release/',''), file),os.path.join(path, '..')),zipfile.ZIP_STORED)
+                else:
+                    ziph.write(os.path.join(root, file), os.path.relpath(os.path.join(root.replace('release/',''), file),os.path.join(path, '..')),zipfile.ZIP_DEFLATED)
+            else:
+                ziph.write(os.path.join(root, file), os.path.relpath(os.path.join(root.replace('release/',''), file),os.path.join(path, '..')),zipfile.ZIP_DEFLATED)
+
 def replaceLibFlutter():
     if len(sys.argv) < 3:
         inputIPBurp()
@@ -116,7 +129,13 @@ def replaceLibFlutter():
         shutil.move("libflutter_x86.so", join("release",libAppX86[0]))
      except:
          pass
-     shutil.make_archive('release.RE', 'zip', 'release')
+
+     if ZIPSTORED:
+        zipf = zipfile.ZipFile('release.RE.zip', 'w', zipfile.ZIP_DEFLATED)
+        zipdir('release/', zipf)
+        zipf.close()
+     else:
+        shutil.make_archive('release.RE', 'zip', 'release')
      shutil.rmtree('libappTmp')
      shutil.rmtree('release')
      print("\nSnapshotHash: "+libappHash)
@@ -126,7 +145,7 @@ def replaceLibFlutter():
      else:
          shutil.move("release.RE.zip", "release.RE.apk")
          print("The resulting apk file: ./release.RE.apk")
-         print("Please sign the apk file\n\nConfigure Proxy in Burp -> *:8083\nRequest Handling -> Support Invisible Proxying -> true")
+         print("Please sign&align the apk file\n\nConfigure Proxy in Burp -> *:8083\nRequest Handling -> Support Invisible Proxying -> true")
      sys.exit()
 
 def replaceFileText(fname,textOrig,textReplace):
@@ -194,7 +213,7 @@ def ELFF(fname, **kwargs):
        result = ""
 
 def extractZip(zipname):
-    global libAppArm64,libAppArm,libAppX64,libAppX86,libios
+    global libAppArm64,libAppArm,libAppX64,libAppX86,libios,ZIPSTORED
     with ZipFile(zipname, 'r') as zipObject:
         listOfFileNames = zipObject.namelist()
         zipObject.extractall('release')
@@ -204,14 +223,20 @@ def extractZip(zipname):
                 libios = fileName, ELFF(join('libappTmp',fileName))
                 sys.argv[1] = join('libappTmp',libios[0])
             if fileName.endswith('v8a/libapp.so'):
+                if zipObject.getinfo(fileName).compress_type == zipfile.ZIP_STORED:
+                    ZIPSTORED = True
                 zipObject.extract(fileName, 'libappTmp')
                 libAppArm64 = fileName, ELFF(join('libappTmp',fileName))
                 sys.argv[1] = join('libappTmp',libAppArm64[0])
             if fileName.endswith('v7a/libapp.so'):
+                if zipObject.getinfo(fileName).compress_type == zipfile.ZIP_STORED:
+                    ZIPSTORED = True
                 zipObject.extract(fileName, 'libappTmp')
                 libAppArm = fileName, ELFF(join('libappTmp',fileName))
                 sys.argv[1] = join('libappTmp',libAppArm[0])
             if fileName.endswith('64/libapp.so'):
+                if zipObject.getinfo(fileName).compress_type == zipfile.ZIP_STORED:
+                    ZIPSTORED = True
                 zipObject.extract(fileName, 'libappTmp')
                 libAppX64 = fileName, ELFF(join('libappTmp',fileName))
                 sys.argv[1] = join('libappTmp',libAppX64[0])
@@ -231,7 +256,7 @@ def main():
     libappHash = sys.argv[1]
 
   if not os.path.exists("enginehash.csv"):
-    urlretrieve("https://gist.githubusercontent.com/Impact-I/de62e8ba8bbbe0c4a1946322d30de08b/raw/f14344fd3e3f54c3deb5aceb81a35507e1b55c26/enginehash.csv", "enginehash.csv")
+    urlretrieve("https://raw.githubusercontent.com/ptswarm/reFlutter/main/enginehash.csv", "enginehash.csv")
 
   with open("enginehash.csv") as f_obj:
    read = csv.DictReader(f_obj, delimiter=',')
