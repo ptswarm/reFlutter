@@ -93,9 +93,7 @@ def convertIPFix():
     finallistIP=list(IPBurp.split('.'))
     intoct.sort(key=lambda s: len(s))
     intoct.reverse()
-    revZero=0
     for i in intoct:
-        print(i)
         if len(i)!=3 and int(i)>7 and int(i)>63 and len('.'.join(intoct))<15: #64-99
             intoct[intoct.index(i)]=str(oct(int(i))).replace('o','')
         elif len(i)!=3 and int(i)>7 and int(i)<64 and len('.'.join(intoct))<15: #8-63
@@ -103,7 +101,6 @@ def convertIPFix():
         elif len(i)<3 and int(i)<8 and len('.'.join(intoct))<15: #0-7
             intoct[intoct.index(i)]=intoct[intoct.index(i)].zfill(3)
     for i in intoct:
-        print(i)
         if i.startswith('0'):
             if len(i)!=3 and int(i, 8)>7 and len('.'.join(intoct))>15: #8-63
                 intoct[intoct.index(i)]=str(int(i, 8)).replace('o','')
