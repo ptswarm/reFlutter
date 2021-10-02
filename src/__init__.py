@@ -42,16 +42,16 @@ def patchLibrary():
 def inputIPBurp():
     global IPBurp
     try:
-        IPBurp = raw_input("Example: (192.168.1.154) etc.\nPlease enter your Burp IP: ")
+        IPBurp = raw_input("Example: (192.168.1.154) etc.\nPlease enter your BurpSuite IP: ")
         if not re.match(r'[0-9]+(?:\.[0-9]+){3}', IPBurp):
             print("Invalid IP Address")
             inputIPBurp()
     except:
-        IPBurp = input('Example: (192.168.1.154) etc.\nPlease enter your Burp IP: ')
+        IPBurp = input('Example: (192.168.1.154) etc.\nPlease enter your BurpSuite IP: ')
         if not re.match(r'[0-9]+(?:\.[0-9]+){3}', IPBurp):
             print("Invalid IP Address")
             inputIPBurp()
-    IPBurp='.'.join(i.zfill(3) for i in IPBurp.split('.'))
+    convertIPFix()
 
 def networkLib():
     global libAppArm64,libAppArm,libAppX64,libAppX86,libios
@@ -86,6 +86,37 @@ def networkLib():
         libAppX86='',''
         notexcept("libflutter_x86.so")
     patchLibrary()
+
+def convertIPFix():
+    global IPBurp
+    intoct = list(IPBurp.split('.'))
+    finallistIP=list(IPBurp.split('.'))
+    intoct.sort(key=lambda s: len(s))
+    intoct.reverse()
+    revZero=0
+    for i in intoct:
+        print(i)
+        if len(i)!=3 and int(i)>7 and int(i)>63 and len('.'.join(intoct))<15: #64-99
+            intoct[intoct.index(i)]=str(oct(int(i))).replace('o','')
+        elif len(i)!=3 and int(i)>7 and int(i)<64 and len('.'.join(intoct))<15: #8-63
+            intoct[intoct.index(i)]=str(oct(int(i))).replace('o','')
+        elif len(i)<3 and int(i)<8 and len('.'.join(intoct))<15: #0-7
+            intoct[intoct.index(i)]=intoct[intoct.index(i)].zfill(3)
+    for i in intoct:
+        print(i)
+        if i.startswith('0'):
+            if len(i)!=3 and int(i, 8)>7 and len('.'.join(intoct))>15: #8-63
+                intoct[intoct.index(i)]=str(int(i, 8)).replace('o','')
+            elif len(i)<3 and int(i)<8 and len('.'.join(intoct))<15: #0-7
+                intoct[intoct.index(i)]=intoct[intoct.index(i)].zfill(3)
+        elif len(i)==3 and int(i)>7 and int(i)>99 and len('.'.join(intoct))>15: #64-99
+            intoct[intoct.index(i)]=str(oct(int(i))).replace('o','')
+    for f in finallistIP:
+        for i in intoct:
+            if i.startswith('0'):
+                if f==str(int(i, 8)):
+                    finallistIP[finallistIP.index(f)]=i.replace('o','')
+    IPBurp = '.'.join(finallistIP)
 
 def notexcept(filename):
     try:
