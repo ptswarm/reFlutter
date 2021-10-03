@@ -56,7 +56,9 @@ To see what code is loaded through DartVM, you must run the application on the d
 impact@f:~$ adb logcat -e reflutter | sed 's/.*DartVM//' >> reflutter.txt
 ```
 <details>
-  <summary>output</summary>
+<summary>output</summary>
+>
+  
 ```dart
 Library:'package:anyapp/navigation/DeepLinkImpl.dart' Class: Navigation extends Object {  
 
@@ -97,7 +99,8 @@ PlainNotificationToken* _instance = sentinel;
                    }
        }
 ```
- </details>
+</details>
+
 ## IOS
 stub
 ## XCode
