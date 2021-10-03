@@ -44,7 +44,7 @@ You need to specify the IP of your Burp Suite relative to your local network on 
 - Add port: `8083`
 - Bind to address: `All interfaces`
 - Request handling: Support invisible proxying = `True`
-<p align="center"><img src="https://user-images.githubusercontent.com/87244850/135753172-20489ef9-0759-432f-b2fa-220607e896b8.png" width="74%"/></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/87244850/135753172-20489ef9-0759-432f-b2fa-220607e896b8.png" width="84%"/></p>
 
 You don't need to install any certificates. On an Android device, you don't need root access. This also bypasses some of the flutter certificate pinning implementations.
 ### Usage on Android
