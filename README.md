@@ -47,7 +47,7 @@ You need to specify the IP of your Burp Suite relative to your local network on 
 <p align="center"><img src="https://user-images.githubusercontent.com/87244850/135753172-20489ef9-0759-432f-b2fa-220607e896b8.png" width="74%"/></p>
 
 You don't need to install any certificates. On an Android device, you don't need root access. This also bypasses some of the flutter certificate pinning implementations.
-## Android
+### Android
 The resulting apk must be aligned and signed. I am using [uber-apk-signer](https://github.com/patrickfav/uber-apk-signer/releases/tag/v1.2.1)
 ```java -jar uber-apk-signer.jar --allowResign -a release.RE.apk```.
 To see what code is loaded through DartVM, you must run the application on the device. You need LogCat you can use Android Studio with reflutter keyword search or use adb logcat
@@ -101,7 +101,7 @@ PlainNotificationToken* _instance = sentinel;
 ```
 </details>
 
-## IOS
+### IOS
 stub
 ### XCode
 <p align="center"><img src="https://user-images.githubusercontent.com/87244850/135372439-822467e7-03db-4593-9063-09a2cec460c2.jpg" width="100%"/></p>
