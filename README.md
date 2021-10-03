@@ -114,10 +114,17 @@ stub
 - [ ] Improve detection of `App.framework` and `libapp.so` inside zip archive
 
 ### Custom Build
-  ```sudo docker pull ptswarm/reflutter```
-  
-  ```console
-sudo docker run -e WAIT=300 -e x64=0 -e arm=0 -e HASH_PATCH=8ee4ef7a67df9845fba331734198a953 -e COMMIT=2f0af3715217a0c2ada72c717d4ed9178d68f6ed --rm -iv${PWD}:/t ptswarm/reflutter
+```sudo docker pull ptswarm/reflutter```
+```
+EXAMPLE BUILD ANDROID ARM64:
+    sudo docker run -e WAIT=300 -e x64=0 -e arm=0 -e HASH_PATCH=<Snapshot_Hash> -e COMMIT=<Engine_commit> --rm -iv${PWD}:/t ptswarm/reflutter
+
+FLAGS:
+    -e x64=0                         <Disables build for x64 architecture, which reduces build time>
+    -e arm=0                         <Disables build for arm architecture, which reduces build time>
+    -e WAIT=300                      <How long do you need to make your edits to the source code>
+    -e HASH_PATCH=[Snapshot_Hash]    <snapshot hash that best matches the engine_commit row in the enginehash.csv table, is used for the desired patch in reFlutter and successful compilation>
+    -e COMMIT=[Engine_commit]        <required commit for your version of the engine is taken from the enginehash.csv table or from the flutter/engine repository>
 ```
   
 ### Build Engine
