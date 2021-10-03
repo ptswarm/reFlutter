@@ -42,7 +42,7 @@ impact@f:~$ reflutter main.ipa
 ```console
 impact@f:~$ adb logcat -e reflutter | sed 's/.*DartVM//' >> reflutter.txt
 ```
-```
+```dart
 Library:'package:anyapp/navigation/DeepLinkImpl.dart' Class: Navigation extends Object {  
 
 String DeepUrl = anyapp://evil.com/;
