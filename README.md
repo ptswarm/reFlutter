@@ -116,4 +116,9 @@ stub
 Based on ```https://storage.googleapis.com/flutter_infra_release/flutter/<version_hash>/android-arm64-release/linux-x64.zip```
   
 The engines are built using reflutter in [Github Actions](https://github.com/ptswarm/reFlutter/actions) to build the desired version, commits and hash snapshots are used from this [table](https://github.com/ptswarm/reFlutter/blob/main/enginehash.csv).
-<p align="center"><img src="https://user-images.githubusercontent.com/87244850/135758423-07c24b57-8df9-48f1-aaae-ff59b87ff1d3.gif" width="95%"/></p>
+<details>
+<summary>build</summary>
+  
+[![gif](https://user-images.githubusercontent.com/87244850/135758767-47b7d51f-8b6c-40b5-85aa-a13c5a94423a.gif)](https://github.com/ptswarm/reFlutter/actions)
+  
+</details>
