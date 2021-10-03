@@ -117,7 +117,7 @@ Based on ```https://storage.googleapis.com/flutter_infra_release/flutter/<versio
   
 The engines are built using reflutter in [Github Actions](https://github.com/ptswarm/reFlutter/actions) to build the desired version, commits and hash snapshots are used from this [table](https://github.com/ptswarm/reFlutter/blob/main/enginehash.csv).
 <details>
-<summary>build</summary>
+<summary>release</summary>
   
 [![gif](https://user-images.githubusercontent.com/87244850/135758767-47b7d51f-8b6c-40b5-85aa-a13c5a94423a.gif)](https://github.com/ptswarm/reFlutter/actions)
   
