@@ -115,7 +115,7 @@ stub
 
 ### Build Engine
 The engines are built using [reFlutter](https://github.com/ptswarm/reFlutter/blob/main/.github/workflows/main.yml) in [Github Actions](https://github.com/ptswarm/reFlutter/actions) to build the desired version, commits and hash snapshots are used from this [table](https://github.com/ptswarm/reFlutter/blob/main/enginehash.csv).
-The hash of the snapshot is extracted from ```https://storage.googleapis.com/flutter_infra_release/flutter/<hash>/android-arm64-release/linux-x64.zip```
+The hash of the snapshot is extracted from ```storage.googleapis.com/flutter_infra_release/flutter/<hash>/android-arm64-release/linux-x64.zip```
 <details>
 <summary>release</summary>
   
