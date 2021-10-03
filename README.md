@@ -107,9 +107,9 @@ stub
 <p align="center"><img src="https://user-images.githubusercontent.com/87244850/135372439-822467e7-03db-4593-9063-09a2cec460c2.jpg" width="100%"/></p>
   
 ### To Do
-- [ ] Display absolute code offset for functions
-- [x] Add socket patch
-- [ ] Extend engine support to Debug using Fork and Github Actions
+- [ ] Display absolute code offset for functions;
+- [x] Add socket patch;
+- [ ] Extend engine support to Debug using Fork and Github Actions;
 - [ ] Improve detection of App.framework and libapp.so inside zip archive
 
 ## Build Engine
