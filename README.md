@@ -39,7 +39,7 @@ Request Handling -> Support Invisible Proxying -> true
 
 impact@f:~$ reflutter main.ipa
 ```
-## Traffic interception
+### Traffic interception
 You need to specify the IP of your Burp Suite relative to your local network on which the device with the flutter application is located. Next, you must configure the Proxy in  `BurpSuite -> Listener Proxy -> Options tab`
 - Add port: `8083`
 - Bind to address: `All interfaces`
