@@ -128,6 +128,7 @@ If you would like to implement your own patches there is manual Flutter code cha
 
 ```sudo docker pull ptswarm/reflutter```
 ```
+# Linux, Windows
 EXAMPLE BUILD ANDROID ARM64:
     sudo docker run -e WAIT=300 -e x64=0 -e arm=0 -e HASH_PATCH=<Snapshot_Hash> -e COMMIT=<Engine_commit> --rm -iv${PWD}:/t ptswarm/reflutter
 
