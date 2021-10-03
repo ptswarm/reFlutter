@@ -109,7 +109,7 @@ stub
 ### To Do
 - [ ] Display absolute code offset for functions;
 - [x] Add socket patch;
-- [ ] Extend engine support to Debug using Fork and [Github Actions](https://github.com/ptswarm/reFlutter/actions);
+- [ ] Extend engine support to Debug using Fork and Github Actions;
 - [ ] Improve detection of `App.framework` and `libapp.so` inside zip archive
 
 ### Build Engine
