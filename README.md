@@ -115,7 +115,9 @@ stub
 
 ### Custom Build
   ```sudo docker pull ptswarm/reflutter```
-  ```sudo docker run -e WAIT=300 -e x64=0 -e arm=0 -e HASH_PATCH=8ee4ef7a67df9845fba331734198a953 -e COMMIT=2f0af3715217a0c2ada72c717d4ed9178d68f6ed --rm -iv${PWD}:/t ptswarm/reflutter```
+  
+  ```console
+  sudo docker run -e WAIT=300 -e x64=0 -e arm=0 -e HASH_PATCH=8ee4ef7a67df9845fba331734198a953 -e COMMIT=2f0af3715217a0c2ada72c717d4ed9178d68f6ed --rm -iv${PWD}:/t ptswarm/reflutter```
   
 ### Build Engine
 The engines are built using [reFlutter](https://github.com/ptswarm/reFlutter/blob/main/.github/workflows/main.yml) in [Github Actions](https://github.com/ptswarm/reFlutter/actions) to build the desired version, commits and hash snapshots are used from this [table](https://github.com/ptswarm/reFlutter/blob/main/enginehash.csv).
