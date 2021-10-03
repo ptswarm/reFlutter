@@ -108,6 +108,7 @@ stub
 
 ### To Do
 - [ ] Display absolute code offset for functions;
+- [ ] Extract more strings and fields;
 - [x] Add socket patch;
 - [ ] Extend engine support to Debug using Fork and Github Actions;
 - [ ] Improve detection of `App.framework` and `libapp.so` inside zip archive
