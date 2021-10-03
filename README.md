@@ -114,6 +114,7 @@ stub
 - [ ] Improve detection of `App.framework` and `libapp.so` inside zip archive
 
 ### Custom Build
+If you would like to implement your own patches there is manual Flutter code change is supported using specially crafted [Docker](https://hub.docker.com/r/ptswarm/reflutter)
 ```sudo docker pull ptswarm/reflutter```
 ```
 EXAMPLE BUILD ANDROID ARM64:
