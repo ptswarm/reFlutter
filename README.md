@@ -105,7 +105,7 @@ PlainNotificationToken* _instance = sentinel;
 stub
 ### XCode
 <p align="center"><img src="https://user-images.githubusercontent.com/87244850/135372439-822467e7-03db-4593-9063-09a2cec460c2.jpg" width="100%"/></p>
-  
+
 ### To Do
 - [ ] Display absolute code offset for functions;
 - [x] Add socket patch;
@@ -114,5 +114,6 @@ stub
 
 ## Build Engine
 Based on ```https://storage.googleapis.com/flutter_infra_release/flutter/<version_hash>/android-arm64-release/linux-x64.zip```
-
+  
 The engines are built using reflutter in [Github Actions](https://github.com/ptswarm/reFlutter/actions) to build the desired version, commits and hash snapshots are used from this [table](https://github.com/ptswarm/reFlutter/blob/main/enginehash.csv).
+<p align="center"><img src="https://user-images.githubusercontent.com/87244850/135758423-07c24b57-8df9-48f1-aaae-ff59b87ff1d3.gif" width="95%"/></p>
