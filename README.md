@@ -112,9 +112,20 @@ stub
 - [x] Add socket patch;
 - [ ] Extend engine support to Debug using Fork and Github Actions;
 - [ ] Improve detection of `App.framework` and `libapp.so` inside zip archive
+  
+### Build Engine
+The engines are built using [reFlutter](https://github.com/ptswarm/reFlutter/blob/main/.github/workflows/main.yml) in [Github Actions](https://github.com/ptswarm/reFlutter/actions) to build the desired version, commits and hash snapshots are used from this [table](https://github.com/ptswarm/reFlutter/blob/main/enginehash.csv).
+The hash of the snapshot is extracted from ```storage.googleapis.com/flutter_infra_release/flutter/<hash>/android-arm64-release/linux-x64.zip```
+<details>
+<summary>release</summary>
+  
+[![gif](https://user-images.githubusercontent.com/87244850/135758767-47b7d51f-8b6c-40b5-85aa-a13c5a94423a.gif)](https://github.com/ptswarm/reFlutter/actions)
+  
+</details>
 
 ### Custom Build
 If you would like to implement your own patches there is manual Flutter code change is supported using specially crafted [Docker](https://hub.docker.com/r/ptswarm/reflutter)
+
 ```sudo docker pull ptswarm/reflutter```
 ```
 EXAMPLE BUILD ANDROID ARM64:
@@ -127,13 +138,3 @@ FLAGS:
     -e HASH_PATCH=[Snapshot_Hash]    <snapshot hash that best matches the engine_commit row in the enginehash.csv table, is used for the desired patch in reFlutter and successful compilation>
     -e COMMIT=[Engine_commit]        <required commit for your version of the engine is taken from the enginehash.csv table or from the flutter/engine repository>
 ```
-  
-### Build Engine
-The engines are built using [reFlutter](https://github.com/ptswarm/reFlutter/blob/main/.github/workflows/main.yml) in [Github Actions](https://github.com/ptswarm/reFlutter/actions) to build the desired version, commits and hash snapshots are used from this [table](https://github.com/ptswarm/reFlutter/blob/main/enginehash.csv).
-The hash of the snapshot is extracted from ```storage.googleapis.com/flutter_infra_release/flutter/<hash>/android-arm64-release/linux-x64.zip```
-<details>
-<summary>release</summary>
-  
-[![gif](https://user-images.githubusercontent.com/87244850/135758767-47b7d51f-8b6c-40b5-85aa-a13c5a94423a.gif)](https://github.com/ptswarm/reFlutter/actions)
-  
-</details>
