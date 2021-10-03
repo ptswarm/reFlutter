@@ -109,8 +109,8 @@ stub
 ### To Do
 - [ ] Display absolute code offset for functions;
 - [x] Add socket patch;
-- [ ] Extend engine support to Debug using Fork and Github Actions;
-- [ ] Improve detection of App.framework and libapp.so inside zip archive
+- [ ] Extend engine support to Debug using Fork and [Github Actions](https://github.com/ptswarm/reFlutter/actions);
+- [ ] Improve detection of `App.framework` and `libapp.so` inside zip archive
 
 ## Build Engine
 Based on ```https://storage.googleapis.com/flutter_infra_release/flutter/<version_hash>/android-arm64-release/linux-x64.zip```
