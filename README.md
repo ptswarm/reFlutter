@@ -61,9 +61,9 @@ String DeepUrl = anyapp://evil.com/;
  
        }
  
- Library:'package:anyapp/auth/navigation/AuthAccount.dart' Class: AuthAccount extends Account {
- 
- PlainNotificationToken* _instance = sentinel;
+Library:'package:anyapp/auth/navigation/AuthAccount.dart' Class: AuthAccount extends Account {
+
+PlainNotificationToken* _instance = sentinel;
  
  Function 'getAuthToken':. (dynamic, dynamic, dynamic, dynamic) => Future<AccessToken*>* { 
 
