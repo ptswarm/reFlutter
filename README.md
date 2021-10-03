@@ -13,18 +13,18 @@ Key features:
 - `dart.cc` is modified to print classes, functions and some fields;
 - contains minor changes for successfull compilation;
 - if you would like to implement your own patches there is manual Flutter code change is supported using specially crafted `Dockerfile`
-## Supported engines
+### Supported engines
 - Android: arm64, arm32;
 - IOS: arm64 (Unstable);
 - Release: Stable, Beta
-## Install
+### Install
 ```
 # Linux, Windows, MacOS
 pip install reflutter
 
 pip3 install reflutter
 ```
-## Usage
+### Usage
 ```console
 impact@f:~$ reflutter main.apk
 
@@ -51,13 +51,13 @@ You don't need to install any certificates. On an Android device, you don't need
 The resulting apk must be aligned and signed. I am using [uber-apk-signer](https://github.com/patrickfav/uber-apk-signer/releases/tag/v1.2.1)
 ```java -jar uber-apk-signer.jar --allowResign -a release.RE.apk```.
 To see what code is loaded through DartVM, you must run the application on the device. You need LogCat you can use Android Studio with reflutter keyword search or use adb logcat
-## Output Example
+### Output Example
 ```console
 impact@f:~$ adb logcat -e reflutter | sed 's/.*DartVM//' >> reflutter.txt
 ```
 <details>
-<summary>output</summary>
->
+<summary>code output</summary>
+
   
 ```dart
 Library:'package:anyapp/navigation/DeepLinkImpl.dart' Class: Navigation extends Object {  
@@ -103,7 +103,7 @@ PlainNotificationToken* _instance = sentinel;
 
 ## IOS
 stub
-## XCode
+### XCode
 <p align="center"><img src="https://user-images.githubusercontent.com/87244850/135372439-822467e7-03db-4593-9063-09a2cec460c2.jpg" width="100%"/></p>
 
 ## Build Engine
