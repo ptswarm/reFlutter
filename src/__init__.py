@@ -166,11 +166,11 @@ def replaceLibFlutter():
      print("\nSnapshotHash: "+libappHash)
      if len(libios[1]) != 0:
          shutil.move("release.RE.zip", "release.RE.ipa")
-         print("The resulting ipa file: ./release.RE.ipa\n\nConfigure Proxy in Burp -> *:8083\nRequest Handling -> Support Invisible Proxying -> true")
+         print("The resulting ipa file: ./release.RE.ipa\nPlease install the ipa file\n\nConfigure Burp Suite proxy server to listen on *:8083\nProxy Tab -> Options -> Proxy Listeners -> Edit -> Binding Tab\nThen enable invisible proxying in Request Handling Tab\nSupport Invisible Proxying -> true\n")
      else:
          shutil.move("release.RE.zip", "release.RE.apk")
          print("The resulting apk file: ./release.RE.apk")
-         print("Please sign&align the apk file\n\nConfigure Proxy in Burp -> *:8083\nRequest Handling -> Support Invisible Proxying -> true")
+         print("Please sign&align the apk file\n\nConfigure Burp Suite proxy server to listen on *:8083\nProxy Tab -> Options -> Proxy Listeners -> Edit -> Binding Tab\nThen enable invisible proxying in Request Handling Tab\nSupport Invisible Proxying -> true\n")
      sys.exit()
 
 def replaceFileText(fname,textOrig,textReplace):
