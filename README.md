@@ -34,6 +34,7 @@ Please sign the apk file
 
 Configure Burp Suite proxy server to listen on *:8083
 Proxy Tab -> Options -> Proxy Listeners -> Edit -> Binding Tab
+
 Then enable invisible proxying in Request Handling Tab
 Support Invisible Proxying -> true
 
