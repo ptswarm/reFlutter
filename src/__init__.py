@@ -125,7 +125,7 @@ def zipdir(path, ziph):
     for root, dirs, files in os.walk(path):
         for file in files:
             if type(file) is str:
-                if file.endswith('.so'):
+                if file.endswith('.so') and ZIPSTORED or file.endswith('resources.arsc'):
                     ziph.write(os.path.join(root, file), os.path.relpath(os.path.join(root.replace('release/',''), file),os.path.join(path, '..')),zipfile.ZIP_STORED)
                 else:
                     ziph.write(os.path.join(root, file), os.path.relpath(os.path.join(root.replace('release/',''), file),os.path.join(path, '..')),zipfile.ZIP_DEFLATED)
@@ -158,12 +158,9 @@ def replaceLibFlutter():
      except:
          pass
 
-     if ZIPSTORED:
-        zipf = zipfile.ZipFile('release.RE.zip', 'w', zipfile.ZIP_DEFLATED)
-        zipdir('release/', zipf)
-        zipf.close()
-     else:
-        shutil.make_archive('release.RE', 'zip', 'release')
+     zipf = zipfile.ZipFile('release.RE.zip', 'w', zipfile.ZIP_DEFLATED)
+     zipdir('release/', zipf)
+     zipf.close()
      shutil.rmtree('libappTmp')
      shutil.rmtree('release')
      print("\nSnapshotHash: "+libappHash)
