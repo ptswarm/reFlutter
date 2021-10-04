@@ -24,7 +24,7 @@ CLASSIFIERS = [
 
 setuptools.setup(
     name='reflutter',
-    version='0.4.3',
+    version='0.4.4',
     description=SHORT_DESCRIPTION,
     long_description=LONG_DESCRIPTION,
     author='impact',
@@ -35,8 +35,6 @@ setuptools.setup(
     platforms=['any'],
     keywords='distutils setuptools egg pip requirements',
     classifiers=CLASSIFIERS,
-    install_requires=['pyelftools',
-                      ],
     entry_points={
         'console_scripts': [
             'reflutter = src.__init__:main',
