@@ -48,7 +48,7 @@ You need to specify the IP of your Burp Suite Proxy Server relative to your loca
 - Request handling: Support invisible proxying = `True`
 <p align="center"><img src="https://user-images.githubusercontent.com/87244850/135753172-20489ef9-0759-432f-b2fa-220607e896b8.png" width="84%"/></p>
 
-You don't need to install any certificates. On an Android device, you don't need root access as well. This also bypasses some of the flutter certificate pinning implementations.
+You don't need to install any certificates. On an Android device, you don't need root access as well. reFlutter also allows to bypass some of the flutter certificate pinning implementations.
 ### Usage on Android
 The resulting apk must be aligned and signed. I am using [uber-apk-signer](https://github.com/patrickfav/uber-apk-signer/releases/tag/v1.2.1)
 ```java -jar uber-apk-signer.jar --allowResign -a release.RE.apk```.
