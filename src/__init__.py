@@ -170,7 +170,7 @@ def replaceLibFlutter():
      else:
          shutil.move("release.RE.zip", "release.RE.apk")
          print("The resulting apk file: ./release.RE.apk")
-         print("Please sign&align the apk file\n\nConfigure Burp Suite proxy server to listen on *:8083\nProxy Tab -> Options -> Proxy Listeners -> Edit -> Binding Tab\n\nThen enable invisible proxying in Request Handling Tab\nSupport Invisible Proxying -> true\n")
+         print("Please sign,align the apk file\n\nConfigure Burp Suite proxy server to listen on *:8083\nProxy Tab -> Options -> Proxy Listeners -> Edit -> Binding Tab\n\nThen enable invisible proxying in Request Handling Tab\nSupport Invisible Proxying -> true\n")
      sys.exit()
 
 def replaceFileText(fname,textOrig,textReplace):
