@@ -135,5 +135,5 @@ FLAGS:
     -e arm=0                         <disables building for arm archiitechture, use to reduce building time>
     -e WAIT=300                      <the amount of time in seconds you need to edit source code>
     -e HASH_PATCH=[Snapshot_Hash]    <here you need to specify snapshot hash which matches the engine_commit line of enginehash.csv table best. It is used for proper patch search in reFlutter and for successfull compilation>
-    -e COMMIT=[Engine_commit]        <required commit for your version of the engine is taken from the enginehash.csv table or from the flutter/engine repository>
+    -e COMMIT=[Engine_commit]        <here you specify commit for your engine version, take it from enginehash.csv table or from flutter/engine repo>
 ```
