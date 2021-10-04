@@ -50,7 +50,7 @@ You need to specify the IP of your Burp Suite Proxy Server relative to your loca
 
 You don't need to install any certificates. On an Android device, you don't need root access as well. reFlutter also allows to bypass some of the flutter certificate pinning implementations.
 ### Usage on Android
-The resulting apk must be aligned and signed. I am using [uber-apk-signer](https://github.com/patrickfav/uber-apk-signer/releases/tag/v1.2.1)
+The resulting apk must be aligned and signed. I use [uber-apk-signer](https://github.com/patrickfav/uber-apk-signer/releases/tag/v1.2.1)
 ```java -jar uber-apk-signer.jar --allowResign -a release.RE.apk```.
 To see what code is loaded through DartVM, you must run the application on the device. You need LogCat you can use Android Studio with reflutter keyword search or use adb logcat
 ### Output Example
