@@ -52,7 +52,7 @@ You don't need to install any certificates. On an Android device, you don't need
 ### Usage on Android
 The resulting apk must be aligned and signed. I use [uber-apk-signer](https://github.com/patrickfav/uber-apk-signer/releases/tag/v1.2.1)
 ```java -jar uber-apk-signer.jar --allowResign -a release.RE.apk```.
-To see what code is loaded through DartVM, you must run the application on the device. You need LogCat you can use Android Studio with reflutter keyword search or use adb logcat
+To see which code is loaded through DartVM, you need to run the application on the device. reFlutter prints its output in logcat with the `reflutter` tag
 ### Output Example
 ```console
 impact@f:~$ adb logcat -e reflutter | sed 's/.*DartVM//' >> reflutter.txt
