@@ -34,8 +34,10 @@ SnapshotHash: 8ee4ef7a67df9845fba331734198a953
 The resulting apk file: ./release.RE.apk
 Please sign the apk file
 
-Configure Proxy in Burp Suite -> *:8083
-Request Handling -> Support Invisible Proxying -> true
+Configure Burp Suite proxy server to listen on *:8083
+Proxy Tab -> Options -> Proxy Listeners -> Edit -> Binding Tab
+Then enable invisible proxying in Request Handling Tab
+Support Invisible Proxying -> true
 
 impact@f:~$ reflutter main.ipa
 ```
