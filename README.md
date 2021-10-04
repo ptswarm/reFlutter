@@ -101,9 +101,9 @@ PlainNotificationToken* _instance = sentinel;
 ```
 </details>
 
-### Usage on IOS
+### Usage on ios
 Install the resulting ipa in a convenient way. To see which code is loaded through DartVM, you need to run the application on the device. reFlutter prints its output in console logs in XCode with the `reflutter` tag.
-<p align="center"><img src="https://user-images.githubusercontent.com/87244850/135859237-b007b49f-e608-4ec1-aaf0-62640b934f96.png" width="100%"/></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/87244850/135859514-36437c50-0726-4cce-a9d0-7334c087a919.png" width="100%"/></p>
 
 ### To Do
 - [ ] Display absolute code offset for functions;
