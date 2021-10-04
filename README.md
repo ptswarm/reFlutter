@@ -21,8 +21,6 @@ Key features:
 ```
 # Linux, Windows, MacOS
 pip install reflutter
-
-pip3 install reflutter
 ```
 ### Usage
 ```console
