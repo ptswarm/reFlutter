@@ -44,7 +44,7 @@ You need to specify the IP of your Burp Suite Proxy Server relative to your loca
 - Add port: `8083`
 - Bind to address: `All interfaces`
 - Request handling: Support invisible proxying = `True`
-<p align="center"><img src="https://user-images.githubusercontent.com/87244850/135859793-5f94085e-f59d-400e-ac56-b85fc7141923.png" width="100%"/></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/87244850/135753172-20489ef9-0759-432f-b2fa-220607e896b8.png" width="100%"/></p>
 
 You don't need to install any certificates. On an Android device, you don't need root access as well. reFlutter also allows to bypass some of the flutter certificate pinning implementations.
 ### Usage on Android
