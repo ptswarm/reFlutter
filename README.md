@@ -15,7 +15,7 @@ Key features:
 - if you would like to implement your own patches there is manual Flutter code change is supported using specially crafted `Dockerfile`
 ### Supported engines
 - Android: arm64, arm32;
-- IOS: arm64 (Unstable);
+- iOS: arm64;
 - Release: Stable, Beta
 ### Install
 ```
