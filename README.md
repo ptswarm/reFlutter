@@ -6,13 +6,13 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/87244850/135659542-22bb8496-bf26-4e25-b7c1-ffd8fc0cea10.png" width="75%"/></p>
 
 #
-This framework helps reverse engineer Flutter apps using patched version of Flutter library which is already compiled and ready for app repacking. There are changes made to snapshot deserialization process that allow you perform dynamic analysis in a convenient way.
+This framework helps reverse engineer Flutter apps using patched version of the Flutter library which is already compiled and ready for app repacking. This library has snapshot deserialization process modified to allow you perform dynamic analysis in a convenient way.
 
 Key features:
 - `socket.cc` is patched for traffic monitoring and interception;
 - `dart.cc` is modified to print classes, functions and some fields;
 - contains minor changes for successfull compilation;
-- if you would like to implement your own patches there is manual Flutter code change is supported using specially crafted `Dockerfile`
+- if you would like to implement your own patches, there is manual Flutter code change is supported using specially crafted `Dockerfile`
 ### Supported engines
 - Android: arm64, arm32;
 - iOS: arm64;
@@ -41,7 +41,7 @@ Support Invisible Proxying -> true
 impact@f:~$ reflutter main.ipa
 ```
 ### Traffic interception
-You need to specify the IP of your Burp Suite Proxy Server relative to your local network where device with the flutter application is located. Next, you should configure the Proxy in  `BurpSuite -> Listener Proxy -> Options tab`
+You need to specify the IP of your Burp Suite Proxy Server located in the same network where the device with the flutter application is. Next, you should configure the Proxy in  `BurpSuite -> Listener Proxy -> Options tab`
 - Add port: `8083`
 - Bind to address: `All interfaces`
 - Request handling: Support invisible proxying = `True`
@@ -102,7 +102,7 @@ PlainNotificationToken* _instance = sentinel;
 </details>
 
 ### Usage on iOS
-Install the resulting ipa in a convenient way. To see which code is loaded through DartVM, you need to run the application on the device. reFlutter prints its output in console logs in XCode with the `reflutter` tag.
+Use the IPA file created after the execution of `reflutter main.ipa` command. To see which code is loaded through DartVM, you need to run the application on the device. reFlutter prints its output in console logs in XCode with the `reflutter` tag.
 <p align="center"><img src="https://user-images.githubusercontent.com/87244850/135860648-a13ba3fd-93d2-4eab-bd38-9aa775c3178f.png" width="100%"/></p>
 
 ### To Do
@@ -113,7 +113,7 @@ Install the resulting ipa in a convenient way. To see which code is loaded throu
 - [ ] Improve detection of `App.framework` and `libapp.so` inside zip archive
   
 ### Build Engine
-The engines are built using [reFlutter](https://github.com/ptswarm/reFlutter/blob/main/.github/workflows/main.yml) in [Github Actions](https://github.com/ptswarm/reFlutter/actions) to build the desired version, commits and hash snapshots are used from this [table](https://github.com/ptswarm/reFlutter/blob/main/enginehash.csv).
+The engines are built using [reFlutter](https://github.com/ptswarm/reFlutter/blob/main/.github/workflows/main.yml) in [Github Actions](https://github.com/ptswarm/reFlutter/actions) to build the desired version, commits and snapshot hashes are used from this [table](https://github.com/ptswarm/reFlutter/blob/main/enginehash.csv).
 The hash of the snapshot is extracted from ```storage.googleapis.com/flutter_infra_release/flutter/<hash>/android-arm64-release/linux-x64.zip```
 <details>
 <summary>release</summary>
