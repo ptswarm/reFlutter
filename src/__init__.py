@@ -135,12 +135,8 @@ def zipdir(path, ziph):
                 ziph.write(os.path.join(root, file), os.path.relpath(os.path.join(root.replace('release/',''), file),os.path.join(path, '..')),zipfile.ZIP_DEFLATED)
 
 def replaceLibFlutter():
-    resp = urlopen('https://raw.githubusercontent.com/ptswarm/reFlutter/main/enginehash.csv').read().decode('utf-8')
-    if libappHash not in resp:
-        shutil.rmtree('libappTmp')
-        print("\n Engine SnapshotHash: "+libappHash+"\n\n This engine is currently not supported.\n Most likely this flutter application uses the Debug version engine which you need to build manually using Docker at the moment.\n More details: https://github.com/ptswarm/reFlutter\n")
-        sys.exit()
     if len(sys.argv) < 3:
+        checkHash()
         inputIPBurp()
         networkLib()
     if os.path.exists("libflutter_arm64.so") or os.path.exists("libflutter_arm.so") or os.path.exists("libflutter_x64.so") or os.path.exists("libflutter_x86.so") or os.path.exists("Flutter"):
@@ -243,6 +239,16 @@ def ELFF(fname, **kwargs):
             f.close()
             return hashT[0]
        result = ""
+
+def checkHash():
+    if libappHash=="":
+        print("\nIs this really a Flutter app? \nNo libapp.so (Android) or App.framework (iOS) was found in the archive.\n\n If you are sure that this is a flutter application, find the library and rename the file in the archive to arm64-v8a/libapp.so or App.framework/App.\n Then use reFlutter again to apply the patch. Then restore the file names in the archive.")
+        sys.exit()
+    resp = urlopen('https://raw.githubusercontent.com/ptswarm/reFlutter/main/enginehash.csv').read().decode('utf-8')
+    if libappHash not in resp:
+        shutil.rmtree('libappTmp')
+        print("\n Engine SnapshotHash: "+libappHash+"\n\n This engine is currently not supported.\n Most likely this flutter application uses the Debug version engine which you need to build manually using Docker at the moment.\n More details: https://github.com/ptswarm/reFlutter\n")
+        sys.exit()
 
 def extractZip(zipname):
     global libAppArm64,libAppArm,libAppX64,libAppX86,libios,ZIPSTORED
