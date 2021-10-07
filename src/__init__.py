@@ -13,8 +13,10 @@ import shutil
 
 if sys.version_info[0] >= 3:
     from urllib.request import urlretrieve
+    from urllib.request import urlopen
 else:
     from urllib import urlretrieve
+    from urllib import urlopen
 
 IPBurp = '192.168.1.12'
 libAppArm64 = '',''
