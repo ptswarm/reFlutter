@@ -135,7 +135,7 @@ def zipdir(path, ziph):
                 ziph.write(os.path.join(root, file), os.path.relpath(os.path.join(root.replace('release/',''), file),os.path.join(path, '..')),zipfile.ZIP_DEFLATED)
 
 def replaceLibFlutter():
-    resp = urlopen('https://raw.githubusercontent.com/ptswarm/reFlutter/main/enginehash.csv').read()
+    resp = urlopen('https://raw.githubusercontent.com/ptswarm/reFlutter/main/enginehash.csv').read().decode('utf-8')
     if libappHash not in resp:
         shutil.rmtree('libappTmp')
         print("\n Engine SnapshotHash: "+libappHash+"\n\n This engine is currently not supported.\n Most likely this flutter application uses the Debug version engine which you need to build manually using Docker at the moment.\n More details: https://github.com/ptswarm/reFlutter\n")
