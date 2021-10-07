@@ -295,5 +295,8 @@ def main():
      print(line["Engine_commit"])
      if os.path.exists("src/third_party/dart/runtime/vm/dart.cc") or os.path.exists("tools/generate_package_config/pubspec.yaml") or os.path.exists("DEPS"):
          patchSource(libappHash,abs(i))
+     row_count=-341
+   if row_count!=-341 and libappHash!=None:
+       print("Engine SnapshotHash: "+libappHash+"\nThis engine is currently not supported.\n Most likely this flutter application uses the Debug version engine which at the moment you need to build manually using Docker.\n More details: https://github.com/ptswarm/reFlutter")
  except (IndexError, ValueError) as e:
        print("USAGE:\nreflutter your.(apk)|(ipa)")
