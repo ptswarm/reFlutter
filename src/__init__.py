@@ -242,7 +242,7 @@ def ELFF(fname, **kwargs):
 
 def checkHash():
     if libappHash=="":
-        print("\nIs this really a Flutter app? \nNo libapp.so (Android) or App.framework (iOS) was found in the archive.\n\n If you are sure that this is a flutter application, find the library and rename the file in the archive to arm64-v8a/libapp.so or App.framework/App.\n Then use reFlutter again to apply the patch. Then restore the file names in the archive.")
+        print("\nIs this really a Flutter app? \nThere was no libapp.so (Android) or App (iOS) found in the package.\n\n Make sure there is arm64-v8a/libapp.so or App.framework/App file in the package. If flutter library name differs you need to rename it properly before patching.\n")
         sys.exit()
     resp = urlopen('https://raw.githubusercontent.com/ptswarm/reFlutter/main/enginehash.csv').read().decode('utf-8')
     if libappHash not in resp:
