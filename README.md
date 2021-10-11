@@ -123,7 +123,7 @@ The hash of the snapshot is extracted from ```storage.googleapis.com/flutter_inf
 </details>
 
 ### Custom Build
-If you would like to implement your own patches there is manual Flutter code change is supported using specially crafted [Docker](https://hub.docker.com/r/ptswarm/reflutter)
+If you would like to implement your own patches, manual Flutter code change is supported using specially crafted [Docker](https://hub.docker.com/r/ptswarm/reflutter)
 
 ```sudo docker pull ptswarm/reflutter```
 ```
