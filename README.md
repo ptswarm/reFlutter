@@ -1,7 +1,6 @@
 [![Twitter](https://img.shields.io/twitter/follow/ptswarm.svg?logo=twitter)](https://twitter.com/intent/retweet?tweet_id=1447561219938955265&related=twitterapi,twittermedia,twitter,support)
 
-[![stars](https://img.shields.io/github/stars/ptswarm/reFlutter)](https://github.com/ptswarm/reFlutter/stargazers)
-[![pypi version](https://img.shields.io/pypi/v/reFlutter.svg)](https://pypi.python.org/pypi/reFlutter) 
+[![stars](https://img.shields.io/github/stars/ptswarm/reFlutter)](https://github.com/ptswarm/reFlutter/stargazers) [![workflow](https://github.com/ptswarm/reFlutter/actions/workflows/main.yml/badge.svg)](https://github.com/ptswarm/reFlutter/actions)
 
 <p align="center"><img src="https://user-images.githubusercontent.com/87244850/135659542-22bb8496-bf26-4e25-b7c1-ffd8fc0cea10.png" width="75%"/></p>
 
@@ -113,8 +112,6 @@ Use the IPA file created after the execution of `reflutter main.ipa` command. To
 - [ ] Improve detection of `App.framework` and `libapp.so` inside zip archive
   
 ### Build Engine
-[![workflow](https://github.com/ptswarm/reFlutter/actions/workflows/main.yml/badge.svg)](https://github.com/ptswarm/reFlutter/actions)
-  
 The engines are built using [reFlutter](https://github.com/ptswarm/reFlutter/blob/main/.github/workflows/main.yml) in [Github Actions](https://github.com/ptswarm/reFlutter/actions) to build the desired version, commits and snapshot hashes are used from this [table](https://github.com/ptswarm/reFlutter/blob/main/enginehash.csv).
 The hash of the snapshot is extracted from ```storage.googleapis.com/flutter_infra_release/flutter/<hash>/android-arm64-release/linux-x64.zip```
 <details>
