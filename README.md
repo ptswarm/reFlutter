@@ -1,6 +1,6 @@
 [![Twitter](https://img.shields.io/twitter/follow/ptswarm.svg?logo=twitter)](https://twitter.com/intent/retweet?tweet_id=1447561219938955265&related=twitterapi,twittermedia,twitter,support)
 
-[![stars](https://img.shields.io/github/stars/ptswarm/reFlutter)](https://github.com/ptswarm/reFlutter/stargazers) [![workflow](https://github.com/ptswarm/reFlutter/actions/workflows/main.yml/badge.svg)](https://github.com/ptswarm/reFlutter/actions)
+[![stars](https://img.shields.io/github/stars/ptswarm/reFlutter)](https://github.com/ptswarm/reFlutter/stargazers) [![workflow](https://img.shields.io/github/workflow/status/ptswarm/reFlutter/Build)](https://github.com/ptswarm/reFlutter/actions)
 
 <p align="center"><img src="https://user-images.githubusercontent.com/87244850/135659542-22bb8496-bf26-4e25-b7c1-ffd8fc0cea10.png" width="75%"/></p>
 
