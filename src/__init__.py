@@ -298,6 +298,7 @@ def main():
     urlretrieve("https://raw.githubusercontent.com/ptswarm/reFlutter/main/enginehash.csv", "enginehash.csv")
 
   with open("enginehash.csv") as f_obj:
+   replaceFileText('src/BUILD.gn','  if (is_android) {\n    public_deps +=\n        [ "//flutter/shell/platform/android:flutter_shell_native_unittests" ]\n  }','')
    read = csv.DictReader(f_obj, delimiter=',')
    row_count = sum(1 for _ in read)
    f_obj.seek(0)
