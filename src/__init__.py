@@ -96,7 +96,7 @@ def convertIPFix():
     intoct.sort(key=lambda s: len(s))
     intoct.reverse()
     for i in intoct:
-        if len(i)!=3 and int(i)>7 and int(i)>63 and len('.'.join(intoct))<15: #64-99
+        if len(i)!=3 and int(i)>7 and int(i)>63 and len('.'.join(intoct))<15:  #64-99
             intoct[intoct.index(i)]=str(oct(int(i))).replace('o','')
         elif len(i)!=3 and int(i)>7 and int(i)<64 and len('.'.join(intoct))<15: #8-63
             intoct[intoct.index(i)]=str(oct(int(i))).replace('o','')
