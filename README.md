@@ -1,4 +1,4 @@
-[![Twitter](https://img.shields.io/twitter/follow/ptswarm.svg?logo=twitter)](https://twitter.com/intent/retweet?tweet_id=1447561219938955265&related=twitterapi,twittermedia,twitter,support)
+[![Twitter](https://img.shields.io/twitter/follow/lmpact_l.svg?logo=twitter)](https://twitter.com/lmpact_l)
 
 [![stars](https://img.shields.io/github/stars/ptswarm/reFlutter)](https://github.com/ptswarm/reFlutter/stargazers) [![workflow](https://img.shields.io/github/workflow/status/ptswarm/reFlutter/Build)](https://github.com/ptswarm/reFlutter/actions)
 
