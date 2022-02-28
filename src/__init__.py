@@ -187,6 +187,7 @@ def replaceFileText(fname,textOrig,textReplace):
        pass
 
 def patchSource(hashS,ver):
+    replaceFileText('src/third_party/dart/runtime/vm/clustered_snapshot.cc','monomorphic_entry_point + unchecked_offset','previous_text_offset_')
     replaceFileText('src/third_party/dart/runtime/vm/dart.cc','FLAG_print_class_table)','true)')
     replaceFileText('src/third_party/dart/runtime/vm/class_table.cc','#include "vm/visitor.h"','#include "vm/visitor.h"\n#include <sys/stat.h>')
     if ver>27:
