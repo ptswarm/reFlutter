@@ -24,7 +24,7 @@ CLASSIFIERS = [
 
 setuptools.setup(
     name='reflutter',
-    version='0.5.9',
+    version='0.6.0',
     description=SHORT_DESCRIPTION,
     long_description=LONG_DESCRIPTION,
     author='impact',
