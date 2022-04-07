@@ -195,6 +195,7 @@ def patchSource(hashS,ver):
         os.makedirs("Documents")
     except:
         pass
+    replaceFileText("DEPS","'src/third_party/dart/third_party/pkg/stagehand':\n   Var('dart_git') + '/stagehand.git' + '@' + Var('dart_stagehand_rev'),", "")
     replaceFileText("DEPS","'src/third_party/dart/third_party/pkg/stagehand':\n   Var('dart_git') + '/stagehand.git' + '@' + Var('dart_stagehand_tag'),", "")
     replaceFileText("DEPS","'src/third_party/dart/third_party/pkg/tflite_native':\n   Var('dart_git') + '/tflite_native.git' + '@' + Var('dart_tflite_native_rev'),", "")
     replaceFileText('src/third_party/dart/DEPS','Var("dart_root") + "/third_party/pkg/tflite_native":\n      Var("dart_git") + "tflite_native.git" + "@" + Var("tflite_native_rev"),', '')
