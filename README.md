@@ -65,7 +65,7 @@ String* DeepUrl = anyapp://evil.com/ ;
 
  Function 'Navigation.': constructor. (dynamic, dynamic, dynamic, dynamic) => NavigationInteractor { 
   
-              Code Offset: _kDartIsolateSnapshotInstructions + 0x0000000000009270
+             Code Offset: _kDartIsolateSnapshotInstructions + 0x0000000000009270
   
                    }
     
@@ -77,7 +77,7 @@ String* DeepUrl = anyapp://evil.com/ ;
     
  Function '_navigateDeepLink@547106886':. (dynamic, dynamic, {dynamic navigator}) => void { 
   
-               Code Offset: _kDartIsolateSnapshotInstructions + 0x0000000000002638
+              Code Offset: _kDartIsolateSnapshotInstructions + 0x0000000000002638
   
                    }
  
@@ -89,7 +89,7 @@ PlainNotificationToken* _instance = sentinel;
  
  Function 'getAuthToken':. (dynamic, dynamic, dynamic, dynamic) => Future<AccessToken*>* { 
   
-               Code Offset: _kDartIsolateSnapshotInstructions + 0x00000000003ee548
+              Code Offset: _kDartIsolateSnapshotInstructions + 0x00000000003ee548
   
                    }
   
