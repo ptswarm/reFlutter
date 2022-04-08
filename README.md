@@ -55,7 +55,7 @@ To see which code is loaded through DartVM, you need to run the application on t
 impact@f:~$ adb -d shell "cat /data/data/<PACKAGE_NAME>/dump.dart" > dump.dart
 ```
 <details>
-<summary>code output</summary>
+<summary>file contents</summary>
 
   
 ```dart
