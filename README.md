@@ -105,7 +105,7 @@ Use the IPA file created after the execution of `reflutter main.ipa` command. To
 <p align="center"><img src="https://user-images.githubusercontent.com/87244850/135860648-a13ba3fd-93d2-4eab-bd38-9aa775c3178f.png" width="100%"/></p>
 
 ### To Do
-- [ ] Display absolute code offset for functions;
+- [x] Display absolute code offset for functions;
 - [ ] Extract more strings and fields;
 - [x] Add socket patch;
 - [ ] Extend engine support to Debug using Fork and Github Actions;
