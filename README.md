@@ -52,7 +52,7 @@ The resulting apk must be aligned and signed. I use [uber-apk-signer](https://gi
 ```java -jar uber-apk-signer.jar --allowResign -a release.RE.apk```.
 To see which code is loaded through DartVM, you need to run the application on the device. reFlutter prints its output in logcat with the `reflutter` tag
 ```console
-impact@f:~$ adb logcat -e reflutter | sed 's/.*DartVM//' >> reflutter.txt
+impact@f:~$ adb -d shell "cat /data/data/<PACKAGE_NAME>/dump.dart" > dump.dart
 ```
 <details>
 <summary>code output</summary>
