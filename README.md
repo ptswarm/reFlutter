@@ -50,7 +50,7 @@ You don't need to install any certificates. On an Android device, you don't need
 ### Usage on Android
 The resulting apk must be aligned and signed. I use [uber-apk-signer](https://github.com/patrickfav/uber-apk-signer/releases/tag/v1.2.1)
 ```java -jar uber-apk-signer.jar --allowResign -a release.RE.apk```.
-To see which code is loaded through DartVM, you need to run the application on the device. reFlutter writes the dump to the root folder of the application and assigns `777` permissions to the file and folder. You can pull the file with adb command
+To see which code is loaded through DartVM, you need to run the application on the device. reFlutter writes the dump to the root folder of the application and assigns `777` permissions to the file and folder. Note that you must manually find what `_kDartIsolateSnapshotInstructions` (ex. 0xB000 ) is equal to using a binary search. You can pull the file with adb command
 ```console
 impact@f:~$ adb -d shell "cat /data/data/<PACKAGE_NAME>/dump.dart" > dump.dart
 ```
